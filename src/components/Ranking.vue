@@ -43,8 +43,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
- $widthRank : 60px;
+ $widthRank : 74px;
  $backgroundColor:transparent;
+ $borderColor: 2px #F1A1A1;
+ $heightRank:500px;
 
 .rank{
   display: flex;
@@ -53,11 +55,10 @@ export default {
   .head{
     width: $widthRank;
     background-color: $backgroundColor;
-    border-radius: 50%;
     height: $widthRank;
     position: absolute;
     top: -35px;
-    border: aliceblue;
+    border: $borderColor;
     border-style: solid;
     border-top-left-radius: 191px;
     border-top-right-radius: 191px;
@@ -67,8 +68,8 @@ export default {
   .body{
     width: $widthRank;
     background-color: $backgroundColor;
-    height: 300px;
-    border: aliceblue;
+    height: $heightRank;
+    border: $borderColor;
     border-style: solid;
     z-index: 1000;
     border-top: transparent;
@@ -85,16 +86,16 @@ export default {
     height: 49px;
     width: 49px;
     border-radius: 50%;
+    
   }
   }
   .footer{
     width: $widthRank;
     height: $widthRank;
-    border-radius: 50%;
     background-color: $backgroundColor;
     position: absolute;
     bottom: -35px;
-    border: aliceblue;
+    border: $borderColor;
     border-style: solid;
     border-bottom-left-radius: 191px;
     border-bottom-right-radius: 191px;
@@ -106,11 +107,13 @@ export default {
     border-radius: 50%;
     background-color: white;
     margin-bottom: 5px;
+    border: $borderColor;
+    border-style: solid;
   
   }
   .scroll{
   overflow-y: auto;
-    height: 359px;
+    height: $heightRank +57;
     position: absolute;
     top: -34px;
     left: 0;
@@ -121,13 +124,7 @@ export default {
     padding-top: 9px;
     -webkit-border-radius: 31px;
     z-index: 111111;
-    border-radius: 31px;
-
-  /* Firefox 1-3.6 */
-  -moz-border-radius: 31px; 
-  
-  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
-  border-radius: 31px; 
+    border-radius: 38px;
   }
 ::-webkit-scrollbar { 
     display: none; 

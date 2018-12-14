@@ -15,7 +15,7 @@ html{
   margin: 0;
 }
 body{
-  background: #999bc691;
+  background: #000bff91;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -26,7 +26,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background: linear-gradient(to bottom, rgba(236, 209, 214, 0.95) 0%, rgba(74, 7, 1, 0.09) 100%);
+ background: linear-gradient(to top, rgba(239, 186, 195, 0.95) 0%, rgba(74, 7, 1, 0.09) 100%);
   height: 100%;
 }
 #nav {
