@@ -26,7 +26,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
- background: linear-gradient(to top, rgba(239, 186, 195, 0.95) 0%, rgba(74, 7, 1, 0.09) 100%);
+ background: linear-gradient(to top, rgba(255, 141, 160, 0.95) 0%, rgba(74, 7, 1, 0.09) 100%);
   height: 100%;
 }
 #nav {

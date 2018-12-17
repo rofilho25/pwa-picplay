@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Ranking',
   props: {
     msg: String
   }
@@ -46,7 +46,7 @@ export default {
  $widthRank : 74px;
  $backgroundColor:transparent;
  $borderColor: 2px #F1A1A1;
- $heightRank:500px;
+ $heightRank:470px;
 
 .rank{
   display: flex;
@@ -57,7 +57,7 @@ export default {
     background-color: $backgroundColor;
     height: $widthRank;
     position: absolute;
-    top: -35px;
+    top: -41px;
     border: $borderColor;
     border-style: solid;
     border-top-left-radius: 191px;
@@ -94,7 +94,7 @@ export default {
     height: $widthRank;
     background-color: $backgroundColor;
     position: absolute;
-    bottom: -35px;
+    bottom: -32px;
     border: $borderColor;
     border-style: solid;
     border-bottom-left-radius: 191px;
@@ -113,9 +113,9 @@ export default {
   }
   .scroll{
   overflow-y: auto;
-    height: $heightRank +57;
+    height: $heightRank +62;
     position: absolute;
-    top: -34px;
+    top: -40px;
     left: 0;
     right: 0;
     margin-left: auto;
