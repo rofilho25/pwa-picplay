@@ -1,8 +1,8 @@
 <template>
     <div class="btns">
 
-        <a  v-for="item in items" class="btn" :class="{clicked:item == selected}" @click="selected = item" :key="item">
-            <span>nome do filme</span>
+        <a  v-for="item in opcoes" class="btn" :class="{clicked:item == selected}" @click="selected = item" :key="item">
+            <span>{{item.name}}</span>
         </a>
     
     </div>
@@ -10,10 +10,13 @@
 
 <script>
 export default {
+    props:{
+        opcoes:Array
+    },
     data(){
         return{
             clicked:null,
-            items:[1,2,3,4,5],
+            items:[],
             selected:null,
         }
     },methods:{

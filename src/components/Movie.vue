@@ -1,13 +1,16 @@
 <template>
     <div>
         <div class="movie"> 
-            <img src="https://identidadecinefila.files.wordpress.com/2014/07/fight-club.png" alt="">
+            <img :src="img" alt="">
         </div>
     </div>
 </template>
 <script>
 export default {
-     name: 'Movie'
+     name: 'Movie',
+     props:{
+         img:String
+     }
 }
 </script>
 

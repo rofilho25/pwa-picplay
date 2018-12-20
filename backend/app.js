@@ -9,9 +9,15 @@ total_pages = 993;
 total_item = 20;
 
 
-var page = Math.floor((Math.random() * total_pages ) + 1);
+var page = function(){
+    return Math.floor((Math.random() * total_pages ) + 1);
+}
 
-var item = Math.floor((Math.random() * total_item ) + 1);
+
+
+var item = function(){
+   return Math.floor((Math.random() * total_item ) + 1);
+} 
 
 app.use(express.static(__dirname));  
 
@@ -22,7 +28,8 @@ app.get('/', function(req, res,next) {
 
 function getMovie(){
     return new Promise((resolve,reject)=>{
-        request('https://api.themoviedb.org/3/movie/popular?api_key='+api+'&language=en-US&page='+page, { json: true }, (err, res, body) => {
+        console.log(page())
+        request('https://api.themoviedb.org/3/movie/popular?api_key='+api+'&language=en-US&page='+page(), { json: true }, (err, res, body) => {
             if (err) { 
                 return reject(err); 
             }
@@ -49,7 +56,7 @@ function getSimilarMovie(id){
 
 function mountMovie(obj){
     try{
-        return obj[item];
+        return obj[item()];
     }catch(e){
         mountMovie(obj);
     }
@@ -88,7 +95,7 @@ function start(){
                 if(fila.length<=10){
                     fila.push(challenger);
                 }   
-                console.log(fila)
+                //console.log(fila)
                 start();         
             }
         })
@@ -98,10 +105,20 @@ function start(){
 start();
 
 io.on('connection', function(client) {  
+    
     client.on('join', function(data) {
         console.log(data);
     });
 })
 
+sendChallenger();
+function sendChallenger(){
+    setInterval(function(){
+        if(fila.length>0){
+            fila.shift();
+        }
+        io.emit('desafio',fila[0]);
+    },10000)
+}
 
 server.listen(4200);  
