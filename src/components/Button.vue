@@ -55,7 +55,6 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     height: 290px;
-    margin-top: 15em;
 }
 span{
     color: #E2E2E2;

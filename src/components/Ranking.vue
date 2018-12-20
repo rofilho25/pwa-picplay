@@ -6,7 +6,10 @@
     <div class="body">
       <div class="scroll">
       <div class="panel">
-      <div class="player"></div>
+      <div class="player">
+        <span>200pts</span>
+        <span>Beto</span>
+      </div>
       <div class="player"></div>
       <div class="player"></div>
       <div class="player"></div>
